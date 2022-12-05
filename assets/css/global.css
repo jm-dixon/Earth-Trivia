@@ -1,0 +1,16 @@
+/* 
+handles global css styles 
+*/
+body {
+    margin: 0;
+}
+a {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 200;
+}
+h1 {
+    font-family: 'Kanit', sans-serif;
+}
+h3 {
+    font-family: 'Kanit', sans-serif;
+}

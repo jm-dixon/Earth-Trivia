@@ -1,13 +1,13 @@
 <template>
-  <div class="index">
+  <div class="Index">
     <index-video />
 
     <quote-reel />
 
-    <div class="index__blocks">
+    <div class="Index__blocks">
 
     </div>
-    <div class="index__socials">
+    <div class="Index__socials">
 
     </div>
   </div>
