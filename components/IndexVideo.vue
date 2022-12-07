@@ -1,13 +1,13 @@
 <template>
   <div class="IndexVideo">
+    <video autoplay muted loop>
+      <source src="../static/titleVideo.mp4" type="video/mp4">
+    </video>
+
     <div class="IndexVideo__titleBox flex jc-c ac-c ai-c ff-c-w">
       <h1>"{{ titleQuote.quote }}"</h1>
       <h3>{{ titleQuote.author }}</h3>
     </div>
-
-    <video autoplay muted loop>
-      <source src="../static/titleVideo.mp4" type="video/mp4">
-    </video>
   </div>
 </template>
 
@@ -47,13 +47,16 @@ export default {
 
 <style type="text/css">
 /* stylelint-disable */
+.IndexVideo {
+  position: relative;
+}
 .IndexVideo video {
   width: 100%;
   opacity: 0.9;
 }
 .IndexVideo__titleBox {
   position: absolute;
-  z-index: 1;
+  top: 0;
   width: 100%;
   height: 100%;
   text-align: center;

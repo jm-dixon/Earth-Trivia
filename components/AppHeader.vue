@@ -4,7 +4,7 @@
       Quotes
     </nuxt-link>
     <nuxt-link to="#">
-      Factoids
+      Facts
     </nuxt-link>
     <nuxt-link to="#">
       Blog
@@ -32,5 +32,6 @@ export default {
   color: var(--color-whiteSmoke);
   padding: 1.5em 1.5em 1.5em 1.5em;
   float: right;
+  text-shadow: 2px 2px var(--color-black);
 }
 </style>
