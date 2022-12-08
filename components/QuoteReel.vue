@@ -1,15 +1,12 @@
 <template>
   <div class="QuoteReel flex jc-c ac-c">
-    <div class="QuoteReel__container">
-      <!-- <p class="QuoteReel__quote">
-        {{ quotesArray[0] }}
-      </p>
-      <h3 class="QuoteReel__author">
-        {{ quotesArray[1] }}
+    <div v-for="item in loadedQuotes" v-bind:key="item.id" :style="{ backgroundColor: item.background }">
+      <h2>
+        {{ item.quote }}
+      </h2>
+      <h3>
+        {{ item.author }}
       </h3>
-      <p>
-        {{ numberItem }}
-      </p> -->
     </div>
   </div>
 </template>
@@ -24,28 +21,18 @@ export default {
   data () {
     return {
       quotesArray: [earthQuotes, spaceQuotes],
-      displayedQuote: null,
-      numberItem: null
-    }
-  },
-  mounted () {
-    this.quoteSelector()
-  },
-  methods: {
-    generateRandomInteger () {
-      let number = Math.random()
-      if (number < 0.5) {
-        number = 1
-      } else {
-        number = 0
-      }
-      return number
-    },
-    quoteSelector () {
-      const file = this.quotesArray[this.generateRandomInteger]
-      this.numberItem = file
-      // const index = Math.floor(Math.random() * file.length)
-      // const quoteFromFile = this.file[index]
+      loadedQuotes: [
+        { id: '0', author: 'test', quote: 'test', background: 'transparent' },
+        { id: '1', author: 'test', quote: 'test', background: 'transparent' },
+        { id: '2', author: 'test', quote: 'test', background: 'transparent' },
+        { id: '3', author: 'test', quote: 'test', background: 'transparent' },
+        { id: '4', author: 'test', quote: 'test', background: 'transparent' },
+        { id: '5', author: 'test', quote: 'test', background: 'transparent' },
+        { id: '6', author: 'test', quote: 'test', background: 'transparent' },
+        { id: '7', author: 'test', quote: 'test', background: 'transparent' },
+        { id: '8', author: 'test', quote: 'test', background: 'transparent' },
+        { id: '9', author: 'test', quote: 'test', background: 'transparent' }
+      ]
     }
   }
 }
@@ -53,13 +40,9 @@ export default {
 
 <style type="text/css">
 /* stylelint-disable */
-.QuoteReel__quote {
-  padding: var(--padding-md);
-  color: var(--color-grey);
-}
-
-.QuoteReel__author {
-  padding: var(--padding-md);
-  color: var(--color-black);
+.QuoteReel div {
+  width: 20%;
+  text-align: center;
+  color: var(--color-whiteSmoke);
 }
 </style>

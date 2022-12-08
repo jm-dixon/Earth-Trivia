@@ -4,18 +4,14 @@
 
     <div class="Index__blocks flex jc-c ac-c ff-c-w">
       <index-block
-        blockPurpose="Fact of the Day"
-        buttonTitle="Read More Facts >"
-      />
-      <index-block
-        blockPurpose="Quote of the Day"
-        buttonTitle="View More Quotes >"
-      />
-      <index-block
-        blockPurpose="Latest Blog Post"
-        buttonTitle="All Blog Posts >"
+        blockPurpose="About the Site"
       />
     </div>
+
+    <quote-reel />
+
+    <fact-reel />
+
     <div class="Index__socials">
 
     </div>
