@@ -1,37 +1,41 @@
 <template>
   <div class="IndexBlock flex ff-c-w">
     <h1>
-      {{ blockPurpose }}
+      {{ siteContent.aboutTitle }}
     </h1>
     <p>
-      {{ siteDescription }}
+      {{ siteContent.aboutDescription }}
     </p>
-    <h3>
-      {{ descriptionSubTitle }}
-    </h3>
-    <p>{{ quickLinks[0] }} | {{ quickLinks[1] }} | {{ quickLinks[2] }}</p>
+    <h4>
+      {{ siteContent.aboutSubTitle }}
+    </h4>
+    <p class="IndexBlock__quickLinks">
+      <nuxt-link to="#">
+        {{ quickLinks[0] }} >
+      </nuxt-link>
+    </p>
+    <p class="IndexBlock__quickLinks">
+      <nuxt-link to="#">
+        {{ quickLinks[1] }} >
+      </nuxt-link>
+    </p>
+    <p class="IndexBlock__quickLinks">
+      <nuxt-link to="#">
+        {{ quickLinks[2] }} >
+      </nuxt-link>
+    </p>
   </div>
 </template>
 
 <script>
+// imports
+import siteContent from '../assets/json/siteContent.json'
+
 export default {
   name: 'IndexBlock',
-  props: {
-    blockPurpose: String
-  },
   data () {
     return {
-      siteDescription: `Earth Trivia is an informative website about planet Earth and the solar system.
-                        This site aims to educate and inspire with titbit style facts, quotes from truly
-                        amazing minds and blog posts and recent developments relating to our planet or
-                        space exploration.
-
-                        This site is linked directly to the Facebook page @EarthTrivia. All posts here will be
-                        echoed on the page at the same time and vice versa.
-
-                        This site is a personal project taken live, as such it is moneiized through the use of
-                        Google Adsense to help with running costs, upkeep and any future developments to the site.`,
-      descriptionSubTitle: 'Quick Links',
+      siteContent,
       quickLinks: ['Quotes', 'Facts', 'Blog Posts']
     }
   }
@@ -47,5 +51,15 @@ export default {
 }
 .IndexBlock p {
   white-space: pre-line;
+  margin: 0;
+}
+.IndexBlock h1, h4 {
+  margin-bottom: 0;
+}
+.IndexBlock h4 {
+  font-size: 1.5em;
+}
+.IndexBlock__quickLinks {
+  margin: 0;
 }
 </style>

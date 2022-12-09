@@ -3,9 +3,7 @@
     <index-video />
 
     <div class="Index__blocks flex jc-c ac-c ff-c-w">
-      <index-block
-        blockPurpose="About the Site"
-      />
+      <index-block />
     </div>
 
     <quote-reel />

@@ -1,12 +1,12 @@
 <template>
-  <div class="QuoteReel flex jc-c ac-c">
-    <div v-for="item in loadedQuotes" v-bind:key="item.id" :style="{ backgroundColor: item.background }">
+  <div class="QuoteReel flex jc-c ac-c ff-r-w">
+    <div v-for="item in loadedQuotes" v-bind:key="item.id" :style="{ backgroundColor: item.background, color: item.color }">
       <h2>
         {{ item.quote }}
       </h2>
-      <h3>
+      <h2>
         {{ item.author }}
-      </h3>
+      </h2>
     </div>
   </div>
 </template>
@@ -22,16 +22,16 @@ export default {
     return {
       quotesArray: [earthQuotes, spaceQuotes],
       loadedQuotes: [
-        { id: '0', author: 'test', quote: 'test', background: 'transparent' },
-        { id: '1', author: 'test', quote: 'test', background: 'transparent' },
-        { id: '2', author: 'test', quote: 'test', background: 'transparent' },
-        { id: '3', author: 'test', quote: 'test', background: 'transparent' },
-        { id: '4', author: 'test', quote: 'test', background: 'transparent' },
-        { id: '5', author: 'test', quote: 'test', background: 'transparent' },
-        { id: '6', author: 'test', quote: 'test', background: 'transparent' },
-        { id: '7', author: 'test', quote: 'test', background: 'transparent' },
-        { id: '8', author: 'test', quote: 'test', background: 'transparent' },
-        { id: '9', author: 'test', quote: 'test', background: 'transparent' }
+        { id: '0', author: 'test', quote: 'test', background: 'var(--color-grey)', color: 'var(--color-neruoscriptBlue)' },
+        { id: '1', author: 'test', quote: 'test', background: 'var(--color-whiteSmoke)', color: 'var(--color-grey)' },
+        { id: '2', author: 'test', quote: 'test', background: 'var(--color-lightGrey)', color: 'var(--color-black)' },
+        { id: '3', author: 'test', quote: 'test', background: 'var(--color-neruoscriptBlue)', color: 'var(--color-lightGrey)' },
+        { id: '4', author: 'test', quote: 'test', background: 'var(--color-lightGrey)', color: 'var(--color-black)' },
+        { id: '5', author: 'test', quote: 'test', background: 'var(--color-neruoscriptBlue)', color: 'var(--color-lightGrey)' },
+        { id: '6', author: 'test', quote: 'test', background: 'var(--color-lightGrey)', color: 'var(--color-black)' },
+        { id: '7', author: 'test', quote: 'test', background: 'var(--color-neruoscriptBlue)', color: 'var(--color-lightGrey)' },
+        { id: '8', author: 'test', quote: 'test', background: 'var(--color-grey)', color: 'var(--color-neruoscriptBlue)' },
+        { id: '9', author: 'test', quote: 'test', background: 'var(--color-whiteSmoke)', color: 'var(--color-grey)' }
       ]
     }
   }
@@ -44,5 +44,8 @@ export default {
   width: 20%;
   text-align: center;
   color: var(--color-whiteSmoke);
+}
+.QuoteReel h2, h3 {
+  padding: var(--padding-lg);
 }
 </style>
