@@ -51,7 +51,6 @@ export default {
 }
 .IndexBlock p {
   white-space: pre-line;
-  margin: 0;
 }
 .IndexBlock h1, h4 {
   margin-bottom: 0;
@@ -60,6 +59,6 @@ export default {
   font-size: 1.5em;
 }
 .IndexBlock__quickLinks {
-  margin: 0;
+  margin-top: 0;
 }
 </style>
