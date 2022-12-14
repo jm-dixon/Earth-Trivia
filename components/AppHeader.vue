@@ -1,20 +1,32 @@
 <template>
-  <div class="Header flex jc-fe">
-    <nuxt-link to="#">
-      Quotes
-    </nuxt-link>
-    <nuxt-link to="#">
-      Facts
-    </nuxt-link>
-    <nuxt-link to="#">
-      Blog
-    </nuxt-link>
+  <div class="Header flex">
+    <div class="flex jc-fs">
+      <h1>
+        <b>{{ websiteTitle }}</b>
+      </h1>
+    </div>
+    <div class="flex jc-fe">
+      <nuxt-link to="#">
+        <b>Quotes</b>
+      </nuxt-link>
+      <nuxt-link to="#">
+        <b>Facts</b>
+      </nuxt-link>
+      <nuxt-link to="#">
+        <b>Blog</b>
+      </nuxt-link>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'AppHeader'
+  name: 'AppHeader',
+  data () {
+    return {
+      websiteTitle: 'EarthTrivia'
+    }
+  }
 }
 </script>
 
@@ -33,5 +45,15 @@ export default {
   padding: 1.5em 1.5em 1.5em 1.5em;
   float: right;
   text-shadow: 2px 2px var(--color-black);
+}
+.Header h1 {
+  text-align: left;
+  color: var(--color-whiteSmoke);
+  padding: 0.3em 0.3em 0.3em 1em;
+  margin: 0;
+  text-shadow: 2px 2px var(--color-black);
+}
+.Header > div {
+  width: 50%;
 }
 </style>

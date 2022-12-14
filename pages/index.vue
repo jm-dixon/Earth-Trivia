@@ -3,12 +3,13 @@
     <index-video />
 
     <div class="Index__blocks flex jc-c ac-c ff-c-w">
-      <index-block />
+      <index-block
+        blockPurpose="introduction"
+      />
+      <index-block
+        blockPurpose="dailies"
+      />
     </div>
-
-    <quote-reel />
-
-    <fact-reel />
 
     <div class="Index__socials">
 
