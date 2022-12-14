@@ -1,29 +1,19 @@
 <template>
   <div class="IndexBlock flex ff-c-w">
-    <h1>
-      {{ siteContent.aboutTitle }}
-    </h1>
-    <p>
-      {{ siteContent.aboutDescription }}
-    </p>
-    <h4>
-      {{ siteContent.aboutSubTitle }}
-    </h4>
-    <p class="IndexBlock__quickLinks">
-      <nuxt-link to="#">
-        {{ quickLinks[0] }} >
-      </nuxt-link>
-    </p>
-    <p class="IndexBlock__quickLinks">
-      <nuxt-link to="#">
-        {{ quickLinks[1] }} >
-      </nuxt-link>
-    </p>
-    <p class="IndexBlock__quickLinks">
-      <nuxt-link to="#">
-        {{ quickLinks[2] }} >
-      </nuxt-link>
-    </p>
+    <div v-if="this.blockPurpose == 'introduction'">
+      <h1>
+        <b>{{ siteContent.indexHeading }}</b>
+      </h1>
+    </div>
+
+    <div class="IndexBlock__dailies flex jc-sb ac-c" v-if="this.blockPurpose == 'dailies'">
+      <h1>
+        <b>{{ siteContent.dailyFactHeading }}</b>
+      </h1>
+      <h1>
+        <b>{{ siteContent.dailyQuoteHeading }}</b>
+      </h1>
+    </div>
   </div>
 </template>
 
@@ -33,6 +23,9 @@ import siteContent from '../assets/json/siteContent.json'
 
 export default {
   name: 'IndexBlock',
+  props: {
+    blockPurpose: String
+  },
   data () {
     return {
       siteContent,
@@ -44,19 +37,24 @@ export default {
 
 <style type="text/css">
 /* stylelint-disable */
+.IndexBlock > h1 {
+  font-family: "Kanit", sans-serif;
+  font-weight: 200;
+  color: #272727;
+}
+.IndexBlock h1:first-of-type {
+  text-align: center;
+}
+.IndexBlock > p {
+  white-space: pre-line;
+}
+.IndexBlock > h4 {
+  font-size: 1.5em;
+}
 .IndexBlock {
   width: 40%;
   padding-top: var(--padding-md);
   padding-bottom: var(--padding-md);
-}
-.IndexBlock p {
-  white-space: pre-line;
-}
-.IndexBlock h1, h4 {
-  margin-bottom: 0;
-}
-.IndexBlock h4 {
-  font-size: 1.5em;
 }
 .IndexBlock__quickLinks {
   margin-top: 0;

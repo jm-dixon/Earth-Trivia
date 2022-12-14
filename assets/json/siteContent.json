@@ -1,5 +1,5 @@
 {
-    "aboutTitle": "About the Site",
-    "aboutDescription": "Earth Trivia is an informative website about planet Earth and the solar system.\nThis site aims to educate and inspire with titbit style facts, quotes from truly\namazing minds and blog posts and recent developments relating to our planet or\nspace exploration.\n\nThis site is linked directly to the Facebook page @EarthTrivia. All posts here will be\nechoed on the page at the same time and vice versa.\n\nThis site is a personal project taken live, as such it is moneiized through the use of\nGoogle Adsense to help with running costs, upkeep and any future developments to the site.",
-    "aboutSubTitle": "Quick Links"
+    "indexHeading": "What is EarthTrivia?",
+    "dailyFactHeading": "Fact of the Day",
+    "dailyQuoteHeading": "Quote of the Day"
 }

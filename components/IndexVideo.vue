@@ -5,8 +5,12 @@
     </video>
 
     <div class="IndexVideo__titleBox flex jc-c ac-c ai-c ff-c-w">
-      <h1>"{{ titleQuote.quote }}"</h1>
-      <h3>{{ titleQuote.author }}</h3>
+      <h1>
+        <b>"{{ titleQuote.quote }}"</b>
+      </h1>
+      <h3>
+        <b>{{ titleQuote.author }}</b>
+      </h3>
     </div>
   </div>
 </template>
@@ -66,10 +70,12 @@ export default {
   max-width: 50%;
   font-size: 2.5em;
   text-shadow: 2px 2px var(--color-black);
+  font-family: "Kanit", sans-serif;
 }
 .IndexVideo__titleBox h3 {
   color: var(--color-whiteSmoke);
-  font-size: 1.5em;
+  font-size: 2em;
   text-shadow: 2px 2px var(--color-black);
+  margin-top: 0;
 }
 </style>
