@@ -2,17 +2,19 @@
   <div class="Header flex">
     <div class="flex jc-fs">
       <h1>
-        <b>{{ websiteTitle }}</b>
+        <nuxt-link class="Header__titleLink" to="/">
+          <b>{{ websiteTitle }}</b>
+        </nuxt-link>
       </h1>
     </div>
     <div class="flex jc-fe">
-      <nuxt-link to="#">
+      <nuxt-link to="/quotes" target="_blank">
         <b>Quotes</b>
       </nuxt-link>
-      <nuxt-link to="#">
+      <nuxt-link to="/facts" target="_blank">
         <b>Facts</b>
       </nuxt-link>
-      <nuxt-link to="#">
+      <nuxt-link to="/blog" target="_blank">
         <b>Blog</b>
       </nuxt-link>
     </div>
@@ -37,6 +39,9 @@ export default {
   width:100%;
   position: absolute;
   z-index: 1;
+}
+.Header__titleLink {
+  padding: 0 !important;
 }
 .Header a {
   text-decoration: none;
