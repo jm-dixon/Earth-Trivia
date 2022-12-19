@@ -16,7 +16,7 @@
         </h1>
         <nuxt-link to="/facts">
           <button type="button">
-            {{ viewFactsButton }}
+            <b>{{ viewFactsButton }}</b>
           </button>
         </nuxt-link>
       </div>
@@ -26,7 +26,7 @@
         </h1>
         <nuxt-link to="/quotes">
           <button type="button">
-            {{ viewQuotesButton }}
+            <b>{{ viewQuotesButton }}</b>
           </button>
         </nuxt-link>
       </div>
@@ -65,7 +65,7 @@ export default {
 .IndexBlock > h1 {
   font-family: "Kanit", sans-serif;
   font-weight: 200;
-  color: #272727;
+  color: var(--color-grey);
 }
 .IndexBlock h1:first-of-type {
   text-align: center;
@@ -83,5 +83,11 @@ export default {
 }
 .IndexBlock__quickLinks {
   margin-top: 0;
+}
+.IndexBlock__dailies button {
+  padding: var(--padding-md) var(--padding-lg);
+  background-color: var(--color-white);
+  font-family: "Kanit", sans-serif;
+  color: var(--color-grey);
 }
 </style>

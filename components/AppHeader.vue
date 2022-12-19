@@ -42,14 +42,19 @@ export default {
 }
 .Header__titleLink {
   padding: 0 !important;
+  color: var(--color-neruoscriptBlue) !important;
+  font-size: 1em !important;
 }
 .Header a {
   text-decoration: none;
-  font-size: 1em;
+  font-size: 1.2em;
   color: var(--color-whiteSmoke);
   padding: 1.5em 1.5em 1.5em 1.5em;
   float: right;
   text-shadow: 2px 2px var(--color-black);
+}
+.Header a:hover {
+  color: var(--color-neruoscriptBlue);
 }
 .Header h1 {
   text-align: left;
