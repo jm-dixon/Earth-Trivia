@@ -9,10 +9,15 @@
       <index-block
         blockPurpose="dailies"
       />
+      <index-block
+        blockPurpose="blog"
+      />
     </div>
 
     <div class="Index__socials">
-
+      <index-block
+        blockPurpose="socials"
+      />
     </div>
   </div>
 </template>

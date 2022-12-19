@@ -71,13 +71,11 @@
 // imports
 import earthQuotes from '../assets/json/earthQuotes.json'
 import spaceQuotes from '../assets/json/spaceQuotes.json'
-import siteContent from '../assets/json/siteContent.json'
 
 export default {
   name: 'QuoteReel',
   data () {
     return {
-      siteContent,
       quotesArray: [earthQuotes, spaceQuotes],
       loadedQuotes: [
         { id: 0, author: '', quote: '', background: 'var(--color-grey)', color: 'var(--color-lightGrey)' },
