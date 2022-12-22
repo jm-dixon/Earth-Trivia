@@ -6,30 +6,25 @@
 
     <div class="IndexVideo__titleBox flex jc-c ac-c ai-c ff-c-w">
       <h1>
-        <b>"{{ titleQuote.quote }}"</b>
+        <b>Quote Here</b>
       </h1>
       <h3>
-        <b>{{ titleQuote.author }}</b>
+        <b>Author Here</b>
       </h3>
     </div>
   </div>
 </template>
 
 <script>
-// imports
-import earthQuotes from '../assets/json/earthQuotes.json'
-import spaceQuotes from '../assets/json/spaceQuotes.json'
-
 export default {
   name: 'IndexVideo',
   data () {
     return {
-      quotesArray: [earthQuotes, spaceQuotes],
       titleQuote: null
     }
   },
   created () {
-    this.chooseRandomQuote()
+    // this.chooseRandomQuote()
   },
   methods: {
     chooseRandomQuote () {
@@ -73,7 +68,7 @@ export default {
   font-family: "Kanit", sans-serif;
 }
 .IndexVideo__titleBox h3 {
-  color: var(--color-whiteSmoke);
+  color: var(--color-neruoscriptBlue);
   font-size: 2em;
   text-shadow: 2px 2px var(--color-black);
   margin-top: 0;
