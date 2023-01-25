@@ -1,6 +1,10 @@
 # Earth Trivia
 
-This is a website which links into the Facebook page '@EarthTrivia', it is an informative website about our planet Earth and our Solar System. This website holds collections of facts and quotes, which get echoed on the Facebook page periodically. This website also has a blog section where blog posts about updates and developments with matters such as climate change and space exploration will be displayed. These posts will also be put on the Facebook page shortly after they are posted on the website.
+This is a website which links into the Facebook page '@EarthTrivia'.
+
+It is an informative website about our planet Earth and our Solar System. This website holds collections of facts and quotes, which get echoed on the Facebook page periodically.
+
+This website also has a blog section where blog posts about updates and developments with matters such as climate change and space exploration will be displayed, these posts will also be put on the Facebook page shortly after they are posted on the website.
 
 ## Build Setup
 
